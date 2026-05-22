@@ -5,7 +5,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>BAITAP.BUOI4.EX_3</StartupObject>
+    <StartupObject>BAITAP.BUOI6.EX6_2</StartupObject>
   </PropertyGroup>
 
 </Project>
