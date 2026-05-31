@@ -28,7 +28,8 @@ namespace BAITAP.BUOI6
             bool value = ContainsValue(mang, check2);
             Console.WriteLine($"Giá trị {check2} có trong mảng: {value}");
             //Câu 3:
-            int chiso = FindIndex(mang, 10);
+            
+            int chiso = FindIndex(mang,10);
             Console.WriteLine($"Chỉ số phần tử {10} là: {chiso}");
             //Câu 4:
             int n = mang.Length;
@@ -59,39 +60,39 @@ namespace BAITAP.BUOI6
             Console.WriteLine("Mảng sau khi loại bỏ trùng lặp: " + string.Join(", ", Mangkhongtrunglap));
 
         }
-        static double avg(int[] arr)
+        static double avg(int[] mang)
         {
             double a = 0, sum = 0;
-            foreach (int i in arr)
+            foreach (int i in mang)
                 sum += i;
-            a = sum / arr.Length;
+            a = sum / mang.Length;
             return a;
         }
-        static bool ContainsValue(int[] arr, int value)
+        static bool ContainsValue(int[] mang, int n)
         {
-            foreach (int i in arr)
+            foreach (int i in mang)
             {
-                if (i == value) return true;
+                if (i == n) return true;
             }
             return false;
         }
-        static int FindIndex(int[] arr, int value)
+        static int FindIndex(int[] mang, int a)
         {
-            for (int i = 0; i < arr.Length; i++)
+            for (int i = 0; i < mang.Length; i++)
             {
-                if (arr[i] == value) return i;
+                if (mang[i] == a) return i;
             }
             return -1;
         }
-        static bool xoa_phantu(int[] arr, ref int n, int x)
+        static bool xoa_phantu(int[] mang, ref int n, int x)
         {
             for (int i = 0; i < n; i++)
             {
-                if (arr[i] == x)
+                if (mang[i] == x)
                 {
                     for (int j = i; j < n - 1; j++)
                     {
-                        arr[j] = arr[j + 1];
+                        mang[j] = mang[j + 1];
                     }
                     n--;
                     return true;
@@ -99,40 +100,40 @@ namespace BAITAP.BUOI6
             }
             return false;
         }
-        static void In_mang(int[] arr, int n)
+        static void In_mang(int[] mang, int n)
         {
             for (int i = 0; i < n; i++)
             {
-                Console.Write(arr[i] + " ");
+                Console.Write(mang[i] + " ");
             }
             Console.WriteLine();
         }
-        static void TimMaxMin(int[] arr, out int max, out int min)
+        static void TimMaxMin(int[] mang, out int max, out int min)
         {
-            max = arr[0];
-            min = arr[0];
-            foreach (int i in arr)
+            max = mang[0];
+            min = mang[0];
+            foreach (int i in mang)
             {
                 if (i > max) max = i;
                 if (i < min) min = i;
             }
         }
-        static int[] DaoNguocMang (int[] arr)
+        static int[] DaoNguocMang (int[] mang)
         {
-            int[] result = new int[arr.Length];
+            int[] result = new int[mang.Length];
             int vitri = 0;
-            for ( int i = arr.Length - 1; i >= 0; i--)
+            for ( int i = mang.Length - 1; i >= 0; i--)
             {
-                result[vitri] = arr[i];
+                result[vitri] = mang[i];
                 vitri++;
             }
             return result;
         }
-        static int[] GiaTriTrungLap(int[] arr)
+        static int[] GiaTriTrungLap(int[] mang)
         {
             List<int> trunglap = new List<int>();
             List<int> daXet = new List<int>();
-            foreach ( int item in arr)
+            foreach ( int item in mang  )
             {
                 if (daXet.Contains(item) && !trunglap.Contains(item))
                 {
@@ -142,10 +143,10 @@ namespace BAITAP.BUOI6
             }
             return trunglap.ToArray();
         }
-        static int[]LoaiBoTrungLap(int[] arr)
+        static int[]LoaiBoTrungLap(int[] mang)
         {
             List<int> KetQua = new List<int>();
-            foreach (int item in arr)
+            foreach (int item in mang)
             {
                 if (!KetQua.Contains(item))
                 {

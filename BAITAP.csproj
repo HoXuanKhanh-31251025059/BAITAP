@@ -5,7 +5,12 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>BAITAP.BUOI6.EX6_2</StartupObject>
+    <StartupObject>BAITAP.BUOI7.EX7_2</StartupObject>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="BUOI8\" />
+    <Folder Include="BUOI9\" />
+  </ItemGroup>
 
 </Project>

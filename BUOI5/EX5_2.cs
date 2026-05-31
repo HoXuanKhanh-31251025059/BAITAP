@@ -27,7 +27,7 @@ namespace BAITAP.BUOI5
         static long TinhGiaiThua(int n)
         {
             long kq = 1;
-            for (int i = 1; i < n; i++)
+            for (int i = 1; i <= n; i++)
             {
                 kq *= i;
             }
